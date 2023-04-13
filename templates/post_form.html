@@ -1,0 +1,22 @@
+{% extends 'base.html' %} 
+{% block content1 %}
+<div class="container">
+    <div class="row">
+      <div class="col-md-8 card mb-4  mt-3 left  top">
+        <div class="card-body">
+        <form method="POST" enctype="multipart/form-data" class="form-control">
+ 
+            <!-- Security token -->
+            {% csrf_token %}
+         
+            <!-- Using the formset -->
+            {{ form.as_p }}
+             
+            <input type="submit" value="Submit" class="form-control">
+        </form>
+    </div>
+</div>
+{% block sidebar %} {% include 'sidebar.html' %} {% endblock sidebar %}
+</div>
+</div>
+    {% endblock content1 %}

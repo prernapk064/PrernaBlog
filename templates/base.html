@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Django Project</title>
+        <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+        <meta name="google" content="notranslate" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+            crossorigin="anonymous" />
+    </head>
+
+    <body>
+        <style>
+            body {
+            font-family: "Roboto", sans-serif;
+            font-size: 17px;
+            background-color: #fdfdfd;
+        }
+        .shadow {
+            box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.1);
+        }
+        .btn-danger {
+            color: #fff;
+            background-color: #f00000;
+            border-color: #dc281e;
+        }
+        .masthead {
+            background: #3398E1;
+            height: auto;
+            padding-bottom: 15px;
+            box-shadow: 0 16px 48px #E3E7EB;
+            padding-top: 10px;
+        }
+        .j3 {
+            border-radius: 20px;
+            display: flex;
+            justify-content: center;
+            
+        }
+    </style>
+
+        <!-- Navigation -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light shadow" id="mainNav">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="{% url 'home' %}">Prerna Icoder</a>
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+                    aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ml-auto">
+                        {% comment %} <li class="nav-item text-black">
+                            <a class="nav-link text-black font-weight-bold" href="sidebar.html/">About</a>
+                        </li> {% endcomment %}
+                        <li class="nav-item text-black">
+                            <a class="nav-link text-black font-weight-bold" href="{% url 'PostCreate' %}">Add Blog</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        
+        {% block content %}
+        <!-- Content Goes here -->
+        {% endblock content %}
+        {% block content1 %}
+        <!-- Content Goes here -->
+        {% endblock content1 %}
+
+        <div class="container c2">
+            <div class="jumbotron">
+                <div class="j3">
+                    <h2>Contact</h2>
+                </div>
+                <div>
+                    <a href="https://www.facebook.com/profile.php?id=100056026988248"><i class="fab fa-facebook-square facebook"></i></a>
+                    <a href="https://twitter.com/Preekp12?t=1gnP5s5r0KIeruWdlA9sGg&s=09"><i class="fab fa-twitter-square twitter"></i></a>
+                    <a href="https://github.com/prernapk064"><i class="fab fa-github-square github"></i></a>
+                    <a href="https://www.linkedin.com/in/prerna-pan-a178ba202"><i class="fab fa-linkedin linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+        <!-- Footer -->
+        <footer class="py-3 bg-grey">
+            <p class="m-0 text-dark text-center ">Copyright &copy; Prerna Blog</p>
+        </footer>
+        <!-- //Font Awsome -->
+    <script src="https://kit.fontawesome.com/b25f0b70e4.js" crossorigin="anonymous"></script>
+
+    <!-- For j-query -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    </body>
+</html>
